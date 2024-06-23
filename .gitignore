@@ -3,3 +3,7 @@
 venv
 .env
 *.keras
+logs
+config
+temp
+plugins
