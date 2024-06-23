@@ -8,6 +8,7 @@ services:
       - ${PWD}/models:/models
     ports:
       - ${PORT_NN_SERVICE}:8008
+    restart: always
   
   tg_bot:
     environment:
@@ -15,6 +16,8 @@ services:
       - BOT_KEY=${BOT_KEY}
     build:
       dockerfile: ${PWD}/dockerfiles/tg_bot.dockerfile
+    restart: always
     depends_on:
       nn:
         condition: service_completed_successfully
+
