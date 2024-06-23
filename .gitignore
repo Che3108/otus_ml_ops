@@ -8,3 +8,4 @@ config
 temp
 plugins
 authorized_key.json
+__pycache__
